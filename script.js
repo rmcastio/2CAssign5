@@ -3,10 +3,35 @@
 // Example output:
 // console.log(range(1, 10)); // outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+const range = (start, end) => {
+    let myArray = [];
+
+    for (let i = start; i <= end; i++) {
+        myArray.push(i);
+    }
+
+    return myArray;
+};
+
+console.log(range(1,10));
+
+
 // 2. Next, write a sum function that takes an array of numbers and returns the sum of
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
+
+const sum = (arrayStart, arrayEnd) => {
+    let totalArray = [];
+    for (let i = arrayStart, i <= arrayEnd; i++) {
+        totalArray.push(i);
+    }
+    return totalArray;
+}
+
+console.log(sum(range(1, 10)));
+
+
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
