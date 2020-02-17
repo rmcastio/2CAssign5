@@ -46,7 +46,7 @@ console.log(sum(range(1, 10)));
 // Example output for reverseArrayInPlace:
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
-// console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+// console.log(arrayValue); // outputs [5, 4, 3, 2, 1] 
 
 function reverseArray(theArray) {
     let myArray = [];
@@ -59,13 +59,18 @@ function reverseArray(theArray) {
 console.log(reverseArray(["A", "B", "C"]));
 
 
-// Not sure if I should use math.floor... for rounding down to lower number.
-function reverseArrayInPlace(anArray) {
-    let valueArray = [1, 2, 3, 4, 5];
-    for(let i = 0; i = anArray.length - 1; i >= 0; i--) {
-        valueArray.push(anArray[i]);
+
+
+
+function reverseArrayInPlace(array) {
+
+    for (let i = 0; i < Math.floor(array.length / 2); i++) { 
+      let oldArray = array[i];  
+      array[i] = array[array.length - 1 - i];  
+      array[array.length - 1 - i] = oldArray; 
     }
-}
-console.log(valueArray);
-
-
+    return array;
+  }
+  let array = [1, 2, 3, 4, 5];
+  reverseArrayInPlace(array);
+  console.log(array);
