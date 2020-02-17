@@ -21,12 +21,13 @@ console.log(range(1,10));
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
 
-const sum = (arrayStart, arrayEnd) => {
-    let totalArray = [];
-    for (let i = arrayStart, i <= arrayEnd; i++) {
-        totalArray.push(i);
+
+const sum = (myArray) => {
+    let sumArray = 0
+    for(let i = 0; i <= myArray.length - 1; i++) {
+        sumArray += myArray[i];
     }
-    return totalArray;
+    return sumArray
 }
 
 console.log(sum(range(1, 10)));
@@ -46,3 +47,25 @@ console.log(sum(range(1, 10)));
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
+function reverseArray(theArray) {
+    let myArray = [];
+    for(let i = theArray.length - 1; i >= 0; i--) {
+        myArray.push(theArray[i]);
+    }
+    return myArray;
+}
+
+console.log(reverseArray(["A", "B", "C"]));
+
+
+// Not sure if I should use math.floor... for rounding down to lower number.
+function reverseArrayInPlace(anArray) {
+    let valueArray = [1, 2, 3, 4, 5];
+    for(let i = 0; i = anArray.length - 1; i >= 0; i--) {
+        valueArray.push(anArray[i]);
+    }
+}
+console.log(valueArray);
+
+
